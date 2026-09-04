@@ -1,0 +1,332 @@
+.lk-root {
+  --lk-bg: #0e1118;
+  --lk-bg2: #121724;
+  --lk-panel: #161b2b;
+  --lk-line: rgba(154, 208, 194, 0.16);
+  --lk-line-strong: rgba(154, 208, 194, 0.32);
+  --lk-teal: #2d9596;
+  --lk-mint: #9ad0c2;
+  --lk-ice: #fdfdfd;
+  --lk-slate: #a9b2c3;
+  --lk-dim: #69718a;
+  --lk-ok: #66e035;
+  --lk-warn: #ff9300;
+  --lk-alert: #ff0000;
+
+  background-color: var(--lk-bg);
+  color: var(--lk-ice);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.lk-root ::selection {
+  background: rgba(154, 208, 194, 0.28);
+  color: var(--lk-ice);
+}
+
+.lk-root :focus-visible {
+  outline: 2px solid var(--lk-mint);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.lk-display {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.015em;
+}
+
+.lk-mono {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  letter-spacing: 0.06em;
+}
+
+.lk-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 72rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.lk-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--lk-dim);
+}
+
+.lk-eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 1px;
+  background: var(--lk-mint);
+  flex: none;
+}
+
+.lk-hairline {
+  border-top: 1px solid var(--lk-line);
+}
+
+.lk-caption {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--lk-dim);
+}
+
+.lk-status-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: currentColor;
+  flex: none;
+}
+
+.lk-status-dot--ok {
+  color: var(--lk-ok);
+}
+
+.lk-status-dot--warn {
+  color: var(--lk-warn);
+}
+
+.lk-status-dot--alert {
+  color: var(--lk-alert);
+}
+
+.lk-frame {
+  border: 1px solid var(--lk-line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--lk-panel);
+}
+
+.lk-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 8px;
+  padding: 0.8rem 1.4rem;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.2;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.lk-btn:active {
+  transform: translateY(1px);
+}
+
+.lk-btn-primary {
+  background: var(--lk-mint);
+  color: #0e1118;
+}
+
+.lk-btn-primary:hover {
+  background: #b9e5d7;
+}
+
+.lk-btn-ghost {
+  border: 1px solid var(--lk-line-strong);
+  color: var(--lk-ice);
+  background: transparent;
+}
+
+.lk-btn-ghost:hover {
+  border-color: var(--lk-mint);
+  color: var(--lk-mint);
+}
+
+.lk-card {
+  background: transparent;
+  border: 1px solid var(--lk-line);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color 0.25s ease;
+}
+
+.lk-card:hover {
+  border-color: var(--lk-line-strong);
+}
+
+.lk-card-media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-bottom: 1px solid var(--lk-line);
+}
+
+.lk-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lk-nav-link {
+  font-size: 14px;
+  color: var(--lk-slate);
+  transition: color 0.2s ease;
+}
+
+.lk-nav-link:hover {
+  color: var(--lk-ice);
+}
+
+.lk-faq-item {
+  border: 1px solid var(--lk-line);
+  border-radius: 10px;
+  background: transparent;
+  transition: border-color 0.2s ease;
+}
+
+.lk-faq-item:hover {
+  border-color: var(--lk-line-strong);
+}
+
+.lk-faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 1.4rem;
+  font-weight: 500;
+  font-size: 15.5px;
+}
+
+.lk-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.lk-faq-item summary .lk-faq-icon {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  color: var(--lk-mint);
+  font-size: 14px;
+  flex: none;
+  transition: transform 0.2s ease;
+}
+
+.lk-faq-item[open] summary .lk-faq-icon {
+  transform: rotate(45deg);
+}
+
+.lk-faq-item p {
+  padding: 0 1.4rem 1.2rem;
+  color: var(--lk-slate);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.lk-mock {
+  border: 1px solid var(--lk-line);
+  border-radius: 12px;
+  background: rgba(253, 253, 253, 0.02);
+  overflow: hidden;
+}
+
+.lk-mock-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid var(--lk-line);
+  padding: 0.8rem 1.25rem;
+}
+
+.lk-mock-thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--lk-line);
+}
+
+.lk-mock-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lk-mock-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.55rem 0.9rem;
+  border-radius: 6px;
+  border: 1px solid var(--lk-line-strong);
+  color: var(--lk-slate);
+  white-space: nowrap;
+}
+
+.lk-mock-btn--primary {
+  border-color: var(--lk-mint);
+  color: var(--lk-mint);
+}
+
+.lk-tile {
+  border: 1px solid var(--lk-line);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color 0.25s ease;
+}
+
+.lk-tile:hover {
+  border-color: var(--lk-line-strong);
+}
+
+.lk-tile-media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-bottom: 1px solid var(--lk-line);
+}
+
+.lk-tile-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lk-tile-caption {
+  padding: 0.6rem 0.8rem;
+}
+
+.lk-panel {
+  border: 1px solid var(--lk-line);
+  border-radius: 10px;
+  padding: 1.25rem;
+  background: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .lk-root * {
+    transition: none !important;
+  }
+}
