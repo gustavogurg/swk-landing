@@ -8,7 +8,7 @@ const FAQS = [
   },
   {
     q: "Onde a IA processa as imagens?",
-    a: "Na borda, junto da câmera. O vídeo não vai para a nuvem — só o evento relevante é enviado.",
+    a: "Na borda, junto da câmera. Só o evento relevante é enviado.",
   },
   {
     q: "Funciona sem internet?",

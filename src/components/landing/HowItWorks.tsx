@@ -10,7 +10,7 @@ const STEPS = [
   {
     tag: "02 · ENTENDER",
     title: "IA rodando na borda",
-    body: "A análise acontece junto da câmera, em milissegundos. O vídeo não sai da planta.",
+    body: "A análise acontece junto da câmera, em milissegundos.",
   },
   {
     tag: "03 · AGIR",
@@ -26,7 +26,7 @@ const EDGE_POINTS = [
   },
   {
     tag: "PRIVACIDADE",
-    body: "o vídeo não sai da planta — só o evento relevante é enviado",
+    body: "só o evento relevante é enviado",
   },
   {
     tag: "ROBUSTEZ",
@@ -109,7 +109,7 @@ export default function HowItWorks() {
                     resposta em milissegundos
                   </li>
                   <li className="lk-mono text-[11px] uppercase tracking-[0.12em] text-[var(--lk-dim)]">
-                    vídeo não sai da planta
+                    modelos treinados para o seu processo
                   </li>
                   <li className="lk-mono text-[11px] uppercase tracking-[0.12em] text-[var(--lk-dim)]">
                     não depende de banda

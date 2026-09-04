@@ -40,9 +40,8 @@ export default function LandingHero() {
               da sua operação.
             </h1>
             <p className="mt-6 max-w-lg text-[16.5px] leading-relaxed text-[var(--lk-slate)]">
-              Usamos as câmeras que você já tem. A análise roda na borda — o
-              vídeo não sai da planta — e o alerta chega no WhatsApp, com a
-              imagem do que aconteceu.
+              Usamos as câmeras que você já tem. A análise roda na borda e o
+              alerta chega no WhatsApp, com a imagem do que aconteceu.
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-4">
