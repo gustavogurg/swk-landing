@@ -44,11 +44,14 @@ export default function Contact() {
           <div className="mx-auto max-w-2xl text-center">
             <p className="lk-eyebrow mb-5 !justify-center">Seção 04 · Contato</p>
             <h2 className="lk-display text-3xl font-medium leading-tight md:text-[2.7rem]">
-              Vamos colocar a sua operação na tela.
+              Seu processo não está aqui?{" "}
+              <span className="text-[var(--lk-mint)]">
+                Converse com a gente.
+              </span>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-[16px] leading-relaxed text-[var(--lk-slate)]">
-              Fale com a gente pelo WhatsApp — respondemos no mesmo dia, sem
-              compromisso.
+              Implantamos soluções já validadas e criamos soluções sob demanda
+              para o seu negócio.
             </p>
             <div className="mt-9">
               <a
