@@ -151,7 +151,7 @@ export default function Pillars() {
           <p className="lk-eyebrow mb-4">Seção 01 · Cases</p>
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <h2 className="lk-display max-w-xl text-3xl font-medium leading-tight md:text-4xl">
-              O que já monitoramos.
+              Cases validados
             </h2>
             <Caption>07 canais · 03 frentes</Caption>
           </div>
