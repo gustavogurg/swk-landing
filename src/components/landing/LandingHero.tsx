@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { whatsappHref } from "./config";
+import { BASE_PATH, whatsappHref } from "./config";
 import { Caption } from "./hud";
 import AlertMock from "./AlertMock";
 
@@ -76,12 +75,11 @@ export default function LandingHero() {
             {TILES.map((tile) => (
               <a key={tile.caption} href="#aplicacoes" className="lk-tile">
                 <div className="lk-tile-media">
-                  <Image
-                    src={tile.img}
+                  <img
+                    src={`${BASE_PATH}${tile.img}`}
                     alt={tile.alt}
-                    fill
-                    sizes="(max-width: 640px) 100vw, 33vw"
-                    className="object-cover"
+                    className="h-full w-full object-cover"
+                    loading="lazy"
                   />
                 </div>
                 <div className="lk-tile-caption">

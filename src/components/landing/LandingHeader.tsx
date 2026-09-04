@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { NAV_LINKS, whatsappHref } from "./config";
+import { BASE_PATH, NAV_LINKS, whatsappHref } from "./config";
 
 export default function LandingHeader() {
   return (
@@ -11,11 +10,9 @@ export default function LandingHeader() {
           aria-label="SWK Vision Solutions — início"
         >
           <span className="flex h-9 items-center rounded-md bg-[var(--lk-ice)] px-2.5">
-            <Image
-              src="/landing/logo.png"
+            <img
+              src={`${BASE_PATH}/landing/logo.png`}
               alt="Logo SWK"
-              width={112}
-              height={24}
               className="h-5 w-auto object-contain"
             />
           </span>

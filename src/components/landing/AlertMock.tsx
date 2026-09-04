@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { BASE_PATH } from "./config";
 
 export default function AlertMock() {
   return (
@@ -29,12 +29,10 @@ export default function AlertMock() {
           imagem e confirme a ocorrência.
         </p>
         <div className="lk-mock-thumb mt-5">
-          <Image
-            src="/landing/empilhadeira.jpeg"
+          <img
+            src={`${BASE_PATH}/landing/empilhadeira.jpeg`}
             alt="Frame da câmera CAM-02 com pessoa próxima à empilhadeira em zona de risco"
-            fill
-            sizes="(max-width: 768px) 100vw, 33vw"
-            className="object-cover"
+            className="h-full w-full object-cover"
           />
           <span className="lk-mono absolute bottom-2 left-2 rounded-[4px] bg-[rgba(14,17,24,0.75)] px-2 py-1 text-[9px] uppercase tracking-[0.14em] text-[var(--lk-ice)]">
             CAM-02 · 14:32:08

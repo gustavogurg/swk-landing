@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { NAV_LINKS, whatsappHref } from "./config";
+import { BASE_PATH, NAV_LINKS, whatsappHref } from "./config";
 
 export default function Footer() {
   return (
@@ -8,11 +7,9 @@ export default function Footer() {
         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
           <div className="max-w-xs">
             <span className="inline-flex h-10 items-center rounded-md bg-[var(--lk-ice)] px-3">
-              <Image
-                src="/landing/logo.png"
+              <img
+                src={`${BASE_PATH}/landing/logo.png`}
                 alt="Logo SWK"
-                width={112}
-                height={24}
                 className="h-5 w-auto object-contain"
               />
             </span>

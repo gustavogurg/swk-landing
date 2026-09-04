@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { BASE_PATH } from "./config";
 import { Caption, Reveal, StatusTone } from "./hud";
 import { cn } from "@/utils/helpers/cn";
 
@@ -121,12 +121,11 @@ function CaseRow({ item, index }: { item: CaseItem; index: number }) {
     <div className="grid items-center gap-7 md:grid-cols-2 md:gap-12">
       <figure className={cn(imageRight && "md:order-2")}>
         <div className="relative aspect-video overflow-hidden rounded-[10px] border border-[var(--lk-line)]">
-          <Image
-            src={item.img}
+          <img
+            src={`${BASE_PATH}${item.img}`}
             alt={item.alt}
-            fill
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover"
+            className="h-full w-full object-cover"
+            loading="lazy"
           />
         </div>
         <figcaption className="mt-2.5">
