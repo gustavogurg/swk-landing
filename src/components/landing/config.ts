@@ -9,9 +9,9 @@ export const WHATSAPP_MESSAGE = encodeURIComponent(
 export const whatsappHref = `${WHATSAPP_URL}?text=${WHATSAPP_MESSAGE}`;
 
 export const NAV_LINKS = [
-  { label: "Aplicações", href: "#aplicacoes" },
+  { label: "Cases", href: "#cases" },
   { label: "Tecnologia", href: "#tecnologia" },
   { label: "Diferencial", href: "#diferencial" },
-  { label: "Sobre", href: "#sobre" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Contato", href: "#contato" },
+  { label: "Quem faz", href: "#quem-faz" },
 ];

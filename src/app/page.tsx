@@ -4,9 +4,8 @@ import SectorsStrip from "@/components/landing/SectorsStrip";
 import Pillars from "@/components/landing/Pillars";
 import HowItWorks from "@/components/landing/HowItWorks";
 import Differentiators from "@/components/landing/Differentiators";
+import Contact from "@/components/landing/Contact";
 import About from "@/components/landing/About";
-import Faq from "@/components/landing/Faq";
-import FinalCta from "@/components/landing/FinalCta";
 import Footer from "@/components/landing/Footer";
 
 export default function LandingPage() {
@@ -19,9 +18,8 @@ export default function LandingPage() {
         <Pillars />
         <HowItWorks />
         <Differentiators />
+        <Contact />
         <About />
-        <Faq />
-        <FinalCta />
       </main>
       <Footer />
     </>

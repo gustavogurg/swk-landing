@@ -5,27 +5,27 @@ import ProfileMock from "./ProfileMock";
 const DIFFERENTIALS = [
   {
     title: "Alerta que explica",
-    body: "Cada evento chega no WhatsApp com a imagem e o porquê. Não é um relatório para ler depois — é um aviso para agir agora.",
+    body: "WhatsApp com a imagem e o porquê — um aviso para agir, não um relatório para ler.",
   },
   {
     title: "Prova na sua planta",
-    body: "Começamos com uma prova de conceito no seu processo real. Você decide com valor medido, não com promessa.",
+    body: "POC no seu processo real; você decide com valor medido.",
   },
   {
     title: "Cientistas e engenheiros juntos",
-    body: "Pesquisadores trabalham lado a lado com os desenvolvedores. O seu processo é enfrentado por quem faz pesquisa e por quem coloca em produção.",
+    body: "Pesquisa e desenvolvimento no mesmo time.",
   },
   {
     title: "Tecnologia proprietária",
-    body: "Os desafios técnicos de cada operação são resolvidos com técnicas desenvolvidas pela própria SWK — não com caixas prontas adaptadas.",
+    body: "Técnicas próprias, não caixas prontas adaptadas.",
   },
   {
     title: "Custo operacional acessível",
-    body: "Soluções customizadas não precisam custar caro. Trabalhamos para manter o custo operacional baixo, mesmo em projetos sob medida.",
+    body: "Sob medida não precisa custar caro.",
   },
   {
     title: "Plataforma em evolução",
-    body: "A plataforma está em constante atualização: critérios de não conformidade customizáveis, avaliação de ocorrências e relatórios analíticos e gerenciais.",
+    body: "Critérios customizáveis, avaliação de ocorrências e relatórios automáticos.",
   },
 ];
 
@@ -42,15 +42,9 @@ export default function Differentiators() {
       <div className="lk-container">
         <Reveal>
           <p className="lk-eyebrow mb-4">Seção 03 · Nosso diferencial</p>
-          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-            <h2 className="lk-display max-w-xl text-3xl font-medium leading-tight md:text-4xl">
-              O que muda quando a SWK entra.
-            </h2>
-            <p className="max-w-md text-[15.5px] leading-relaxed text-[var(--lk-slate)]">
-              Tecnologia é o meio. O diferencial está em como ela chega até a
-              sua operação.
-            </p>
-          </div>
+          <h2 className="lk-display max-w-xl text-3xl font-medium leading-tight md:text-4xl">
+            O que muda quando a SWK entra.
+          </h2>
         </Reveal>
 
         <div className="mt-14 grid gap-14 lg:grid-cols-[1.5fr_1fr] lg:gap-16">
@@ -95,10 +89,8 @@ export default function Differentiators() {
                 </span>
               </h3>
               <p className="mx-auto mt-6 max-w-2xl text-[16px] leading-relaxed text-[var(--lk-slate)]">
-                Cada operação tem um processo que só ela conhece. A SWK desenha
-                soluções sob medida: entendemos o seu fluxo, treinamos o modelo
-                com as suas cenas e provamos o valor dentro da sua planta —
-                antes de você decidir.
+                Entendemos o seu fluxo, treinamos o modelo com as suas cenas e
+                provamos o valor dentro da sua planta.
               </p>
             </div>
           </Reveal>

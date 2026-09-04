@@ -30,18 +30,19 @@ export default function LandingHero() {
         <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
           <div>
             <p className="lk-eyebrow">
-              SWK Vision · Visão computacional para operações
+              SWK Vision · Visão computacional e IA
             </p>
             <h1 className="lk-display mt-7 max-w-xl text-[2.35rem] font-medium leading-[1.08] md:text-[3.1rem]">
-              A sua câmera já está olhando.{" "}
+              Visão Computacional e IA aplicadas à{" "}
               <span className="text-[var(--lk-mint)]">
-                A SWK faz ela enxergar.
-              </span>
+                segurança, produtividade e qualidade
+              </span>{" "}
+              da sua operação.
             </h1>
             <p className="mt-6 max-w-lg text-[16.5px] leading-relaxed text-[var(--lk-slate)]">
-              Do capacete ausente na subestação ao morango fora do padrão na
-              esteira: a SWK ensina as suas câmeras a reconhecer o que importa
-              — e a avisar quando algo foge do combinado.
+              Usamos as câmeras que você já tem. A análise roda na borda — o
+              vídeo não sai da planta — e o alerta chega no WhatsApp, com a
+              imagem do que aconteceu.
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-4">
@@ -53,18 +54,10 @@ export default function LandingHero() {
               >
                 Falar no WhatsApp
               </a>
-              <a href="#aplicacoes" className="lk-btn lk-btn-ghost">
-                Conhecer os casos
+              <a href="#cases" className="lk-btn lk-btn-ghost">
+                Ver cases
               </a>
             </div>
-
-            <p className="lk-mono mt-9 text-[10.5px] uppercase tracking-[0.16em] text-[var(--lk-dim)]">
-              Câmeras existentes{" "}
-              <span className="mx-2 text-[var(--lk-mint)]">·</span> IA na borda{" "}
-              <span className="mx-2 text-[var(--lk-mint)]">·</span> Alerta no
-              WhatsApp <span className="mx-2 text-[var(--lk-mint)]">·</span>{" "}
-              Dashboard + relatórios
-            </p>
           </div>
 
           <AlertMock />
@@ -73,7 +66,7 @@ export default function LandingHero() {
         <div className="lk-hairline mt-16">
           <div className="grid gap-5 pt-10 sm:grid-cols-3">
             {TILES.map((tile) => (
-              <a key={tile.caption} href="#aplicacoes" className="lk-tile">
+              <a key={tile.caption} href="#cases" className="lk-tile">
                 <div className="lk-tile-media">
                   <img
                     src={`${BASE_PATH}${tile.img}`}

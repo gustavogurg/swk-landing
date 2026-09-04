@@ -5,17 +5,17 @@ const STEPS = [
   {
     tag: "01 · CONECTAR",
     title: "A câmera que você já tem",
-    body: "Lemos o fluxo das câmeras IP e RTSP que já estão instaladas. Nada de trocar infraestrutura: a operação continua no lugar, o equipamento é o mesmo.",
+    body: "Lemos câmeras IP e RTSP já instaladas. Nada de trocar infraestrutura.",
   },
   {
     tag: "02 · ENTENDER",
     title: "IA rodando na borda",
-    body: "Modelos treinados para o seu processo processam as imagens junto da câmera. A análise acontece em milissegundos e o vídeo não precisa sair da sua planta.",
+    body: "A análise acontece junto da câmera, em milissegundos. O vídeo não sai da planta.",
   },
   {
     tag: "03 · AGIR",
     title: "Alerta com contexto",
-    body: "Cada desvio vira alerta no WhatsApp com a imagem e o porquê. No dashboard, a operação ao vivo; nos relatórios analíticos e gerenciais, o histórico para a gestão decidir com dado.",
+    body: "Desvio vira alerta no WhatsApp com imagem e porquê. Dashboard ao vivo, relatórios para a gestão.",
   },
 ];
 
@@ -40,15 +40,9 @@ export default function HowItWorks() {
       <div className="lk-container">
         <Reveal>
           <p className="lk-eyebrow mb-4">Seção 02 · Nossa tecnologia</p>
-          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-            <h2 className="lk-display max-w-xl text-3xl font-medium leading-tight md:text-4xl">
-              Da câmera ao alerta.
-            </h2>
-            <p className="max-w-md text-[15.5px] leading-relaxed text-[var(--lk-slate)]">
-              A SWK entra pela câmera que já está instalada. O que muda é o que
-              ela passa a entender.
-            </p>
-          </div>
+          <h2 className="lk-display max-w-xl text-3xl font-medium leading-tight md:text-4xl">
+            Da câmera ao alerta.
+          </h2>
         </Reveal>
 
         <Reveal delay={0.05}>
@@ -151,15 +145,8 @@ export default function HowItWorks() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="mt-14 grid gap-6 border border-[var(--lk-line)] p-8 md:grid-cols-[1fr_2fr] md:p-10">
-            <div>
-              <p className="lk-eyebrow mb-3">Por que na borda?</p>
-              <p className="text-[15.5px] leading-relaxed text-[var(--lk-slate)]">
-                A SWK processa onde a câmera está, não em um datacenter
-                distante. É isso que torna a solução rápida, discreta e viável
-                para operações que não podem depender de banda.
-              </p>
-            </div>
+          <div className="mt-14 border border-[var(--lk-line)] p-8 md:p-10">
+            <p className="lk-eyebrow mb-6">Por que na borda?</p>
             <ul className="grid gap-5 sm:grid-cols-3">
               {EDGE_POINTS.map((point) => (
                 <li key={point.tag}>

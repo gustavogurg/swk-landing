@@ -24,36 +24,20 @@ const TEAM = [
   },
 ];
 
-const APPROACH = [
-  {
-    tag: "PROCESSO PRIMEIRO",
-    body: "a solução nasce do seu fluxo, não de um catálogo",
-  },
-  {
-    tag: "ENTREGA EM PRODUÇÃO",
-    body: "medimos sucesso pelo alerta que chega, não pelo protótipo",
-  },
-  {
-    tag: "PARCEIRO CONTÍNUO",
-    body: "acompanhamos a operação depois do go-live",
-  },
-];
-
 export default function About() {
   return (
-    <section id="sobre" className="lk-hairline scroll-mt-24 py-24 md:py-32">
+    <section id="quem-faz" className="lk-hairline scroll-mt-24 py-24 md:py-28">
       <div className="lk-container">
         <Reveal>
-          <p className="lk-eyebrow mb-4">Seção 04 · Sobre a SWK</p>
-          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-            <h2 className="lk-display max-w-xl text-3xl font-medium leading-tight md:text-4xl">
-              Feita para enxergar o chão de fábrica.
-            </h2>
-            <p className="max-w-md text-[15.5px] leading-relaxed text-[var(--lk-slate)]">
-              A SWK Vision Solutions nasceu em outubro de 2023 como spin-off da
-              FWK e da SP5 Office — décadas de gestão de projetos e
-              transformação de processos — para unir pesquisa em IA e visão
-              computacional à operação real.
+          <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="lk-eyebrow mb-3">Quem faz a SWK</p>
+              <h2 className="lk-display max-w-2xl text-2xl font-medium leading-tight md:text-3xl">
+                Spin-off da FWK e da SP5 Office, fundada em 2023.
+              </h2>
+            </div>
+            <p className="lk-mono text-[10px] uppercase tracking-[0.16em] text-[var(--lk-dim)]">
+              IA e visão computacional · pesquisa & desenvolvimento
             </p>
           </div>
         </Reveal>
@@ -95,21 +79,6 @@ export default function About() {
             </Reveal>
           ))}
         </div>
-
-        <Reveal delay={0.1}>
-          <ul className="lk-hairline mt-14 grid gap-8 pt-10 md:grid-cols-3">
-            {APPROACH.map((item) => (
-              <li key={item.tag}>
-                <p className="lk-mono text-[10.5px] uppercase tracking-[0.18em] text-[var(--lk-ice)]">
-                  {item.tag}
-                </p>
-                <p className="mt-1.5 text-[14px] leading-relaxed text-[var(--lk-dim)]">
-                  {item.body}
-                </p>
-              </li>
-            ))}
-          </ul>
-        </Reveal>
       </div>
     </section>
   );
