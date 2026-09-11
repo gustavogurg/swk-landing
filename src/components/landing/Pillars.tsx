@@ -2,14 +2,21 @@ import { BASE_PATH } from "./config";
 import { Caption, Reveal, StatusTone } from "./hud";
 import { cn } from "@/utils/helpers/cn";
 
+type CaseImage = {
+  src: string;
+  alt: string;
+  label: string;
+};
+
 type CaseItem = {
   cam: string;
   title: string;
   statusLabel: string;
   statusTone: StatusTone;
   sector: string;
-  img: string;
-  alt: string;
+  img?: string;
+  alt?: string;
+  imgs?: CaseImage[];
   desc: string;
 };
 
@@ -50,9 +57,19 @@ const PILLARS: Pillar[] = [
         statusLabel: "Alerta",
         statusTone: "alert",
         sector: "indoor & outdoor",
-        img: "/landing/fogo-fumaca.jpeg",
-        alt: "Princípio de incêndio em pátio externo detectado por câmera com IA",
-        desc: "Reconhece fumaça e chama em segundos — dentro do galpão ou no pátio — e manda o alerta com o ponto exato.",
+        imgs: [
+          {
+            src: "/landing/fogo-outdoor.jpeg",
+            alt: "Princípio de incêndio em área urbana aberta detectado por câmera com IA",
+            label: "Outdoor",
+          },
+          {
+            src: "/landing/fogo-indoor.jpeg",
+            alt: "Princípio de incêndio em ambiente interno detectado por câmera com IA",
+            label: "Indoor",
+          },
+        ],
+        desc: "Reconhece fumaça e chama em segundos — em áreas internas ou externas — e manda o alerta com o ponto exato.",
       },
     ],
   },
@@ -116,19 +133,43 @@ function CaseRow({ item, index }: { item: CaseItem; index: number }) {
   return (
     <div className="grid items-center gap-7 md:grid-cols-2 md:gap-12">
       <figure className={cn(imageRight && "md:order-2")}>
-        <div className="relative aspect-video overflow-hidden rounded-[10px] border border-[var(--lk-line)]">
-          <img
-            src={`${BASE_PATH}${item.img}`}
-            alt={item.alt}
-            className="h-full w-full object-cover"
-            loading="lazy"
-          />
-        </div>
-        <figcaption className="mt-2.5">
-          <Caption tone={item.statusTone}>
-            {item.statusLabel} · {item.cam} · {item.sector}
-          </Caption>
-        </figcaption>
+        {item.imgs && item.imgs.length > 0 ? (
+          <div className="space-y-4">
+            {item.imgs.map((image) => (
+              <div key={image.src}>
+                <div className="relative aspect-video overflow-hidden rounded-[10px] border border-[var(--lk-line)]">
+                  <img
+                    src={`${BASE_PATH}${image.src}`}
+                    alt={image.alt}
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="mt-2.5">
+                  <Caption tone={item.statusTone}>
+                    {item.statusLabel} · {item.cam} · {image.label}
+                  </Caption>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : item.img ? (
+          <>
+            <div className="relative aspect-video overflow-hidden rounded-[10px] border border-[var(--lk-line)]">
+              <img
+                src={`${BASE_PATH}${item.img}`}
+                alt={item.alt}
+                className="h-full w-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <figcaption className="mt-2.5">
+              <Caption tone={item.statusTone}>
+                {item.statusLabel} · {item.cam} · {item.sector}
+              </Caption>
+            </figcaption>
+          </>
+        ) : null}
       </figure>
 
       <div className={cn(imageRight && "md:order-1")}>
