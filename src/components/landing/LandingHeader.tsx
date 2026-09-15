@@ -14,7 +14,7 @@ export default function LandingHeader() {
             alt="Logo SWK"
             className="h-7 w-auto object-contain"
           />
-          <span className="lk-brand-font text-[13.5px] text-[var(--lk-slate)]">
+          <span className="lk-brand-font text-[15px] text-[var(--lk-slate)]">
             SWK Vision Solutions
           </span>
         </a>
