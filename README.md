@@ -40,5 +40,6 @@ repositório irmão `../swk-vercel`.
 
 ## Aviso
 
-- O número do WhatsApp nos CTAs é um placeholder (`config.ts` → `WHATSAPP_URL`).
+- O formulário de contato envia para o endpoint do Formspree
+  (`config.ts` → `FORMSPREE_ENDPOINT`).
 - A apresentação do fundador em `About.tsx` é um placeholder a substituir.

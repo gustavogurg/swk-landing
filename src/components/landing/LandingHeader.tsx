@@ -1,4 +1,4 @@
-import { BASE_PATH, NAV_LINKS, whatsappHref } from "./config";
+import { BASE_PATH, NAV_LINKS } from "./config";
 
 export default function LandingHeader() {
   return (
@@ -9,14 +9,12 @@ export default function LandingHeader() {
           className="flex items-center gap-3"
           aria-label="SWK Vision Solutions — início"
         >
-          <span className="flex h-9 items-center rounded-md bg-[var(--lk-ice)] px-2.5">
-            <img
-              src={`${BASE_PATH}/landing/logo.png`}
-              alt="Logo SWK"
-              className="h-5 w-auto object-contain"
-            />
-          </span>
-          <span className="lk-mono text-[10px] font-medium uppercase tracking-[0.18em] text-[var(--lk-slate)]">
+          <img
+            src={`${BASE_PATH}/landing/logo.png`}
+            alt="Logo SWK"
+            className="h-7 w-auto object-contain"
+          />
+          <span className="lk-brand-font text-[13.5px] text-[var(--lk-slate)]">
             Vision Solutions
           </span>
         </a>
@@ -32,8 +30,8 @@ export default function LandingHeader() {
           ))}
         </nav>
 
-        <a href={whatsappHref} target="_blank" rel="noopener" className="lk-btn lk-btn-primary !px-4 !py-2 !text-[13.5px]">
-          Falar no WhatsApp
+        <a href="#contato" className="lk-btn lk-btn-primary !px-4 !py-2 !text-[13.5px]">
+          Entrar em contato
         </a>
       </div>
     </header>

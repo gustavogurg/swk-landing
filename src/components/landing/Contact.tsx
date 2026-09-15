@@ -1,4 +1,4 @@
-import { whatsappHref } from "./config";
+import { FORMSPREE_ENDPOINT } from "./config";
 import { Reveal } from "./hud";
 
 const FAQS = [
@@ -32,7 +32,7 @@ const FAQS = [
   },
   {
     q: "Meu processo não está nos cases?",
-    a: "É assim que a maioria começa. Chama no WhatsApp que a gente desenha sob medida.",
+    a: "É assim que a maioria começa. Manda uma mensagem que a gente desenha sob medida.",
   },
 ];
 
@@ -53,42 +53,99 @@ export default function Contact() {
               Implantamos soluções já validadas e criamos soluções sob demanda
               para o seu negócio.
             </p>
-            <div className="mt-9">
-              <a
-                href={whatsappHref}
-                target="_blank"
-                rel="noopener"
-                className="lk-btn lk-btn-primary"
-              >
-                Falar no WhatsApp
-              </a>
-            </div>
           </div>
         </Reveal>
 
-        <div className="lk-hairline mt-20 pt-14">
+        <div className="mt-16 grid gap-14 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
           <Reveal>
-            <div className="mb-10 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-              <p className="lk-eyebrow">FAQ</p>
-              <p className="lk-mono text-[10px] uppercase tracking-[0.16em] text-[var(--lk-dim)]">
-                Dúvidas de quem opera
+            <form
+              action={FORMSPREE_ENDPOINT}
+              method="POST"
+              className="space-y-5"
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="Contato via site SWK"
+              />
+              <div className="grid gap-5 sm:grid-cols-2">
+                <div className="lk-field">
+                  <label htmlFor="nome">Nome</label>
+                  <input
+                    id="nome"
+                    name="nome"
+                    type="text"
+                    className="lk-input"
+                    placeholder="Seu nome"
+                    required
+                  />
+                </div>
+                <div className="lk-field">
+                  <label htmlFor="empresa">Empresa</label>
+                  <input
+                    id="empresa"
+                    name="empresa"
+                    type="text"
+                    className="lk-input"
+                    placeholder="Opcional"
+                  />
+                </div>
+              </div>
+              <div className="lk-field">
+                <label htmlFor="telefone">Telefone</label>
+                <input
+                  id="telefone"
+                  name="telefone"
+                  type="tel"
+                  className="lk-input"
+                  placeholder="(00) 00000-0000"
+                />
+              </div>
+              <div className="lk-field">
+                <label htmlFor="mensagem">Mensagem</label>
+                <textarea
+                  id="mensagem"
+                  name="mensagem"
+                  className="lk-input"
+                  placeholder="O que a sua operação precisa monitorar?"
+                  required
+                />
+              </div>
+              <div>
+                <button type="submit" className="lk-btn lk-btn-primary">
+                  Enviar mensagem
+                </button>
+              </div>
+              <p className="lk-mono text-[9.5px] uppercase tracking-[0.14em] text-[var(--lk-dim)]">
+                Resposta no mesmo dia · sem compromisso
               </p>
-            </div>
+            </form>
           </Reveal>
-          <div className="grid items-start gap-3 lg:grid-cols-2 lg:gap-x-6">
-            {FAQS.map((item, i) => (
-              <Reveal key={item.q} delay={i * 0.03}>
-                <details className="lk-faq-item">
-                  <summary>
-                    <span>{item.q}</span>
-                    <span className="lk-faq-icon" aria-hidden>
-                      +
-                    </span>
-                  </summary>
-                  <p>{item.a}</p>
-                </details>
-              </Reveal>
-            ))}
+
+          <div>
+            <Reveal>
+              <div className="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+                <p className="lk-eyebrow">FAQ</p>
+                <p className="lk-mono text-[10px] uppercase tracking-[0.16em] text-[var(--lk-dim)]">
+                  Dúvidas de quem opera
+                </p>
+              </div>
+            </Reveal>
+            <div className="space-y-3">
+              {FAQS.map((item, i) => (
+                <Reveal key={item.q} delay={i * 0.03}>
+                  <details className="lk-faq-item">
+                    <summary>
+                      <span>{item.q}</span>
+                      <span className="lk-faq-icon" aria-hidden>
+                        +
+                      </span>
+                    </summary>
+                    <p>{item.a}</p>
+                  </details>
+                </Reveal>
+              ))}
+            </div>
           </div>
         </div>
       </div>

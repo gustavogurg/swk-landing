@@ -1,4 +1,4 @@
-import { BASE_PATH, whatsappHref } from "./config";
+import { BASE_PATH } from "./config";
 import { Caption } from "./hud";
 import AlertMock from "./AlertMock";
 
@@ -45,13 +45,8 @@ export default function LandingHero() {
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-4">
-              <a
-                href={whatsappHref}
-                target="_blank"
-                rel="noopener"
-                className="lk-btn lk-btn-primary"
-              >
-                Falar no WhatsApp
+              <a href="#contato" className="lk-btn lk-btn-primary">
+                Entrar em contato
               </a>
               <a href="#cases" className="lk-btn lk-btn-ghost">
                 Ver cases

@@ -1,4 +1,4 @@
-import { BASE_PATH, NAV_LINKS, whatsappHref } from "./config";
+import { BASE_PATH, NAV_LINKS } from "./config";
 
 export default function Footer() {
   return (
@@ -6,13 +6,11 @@ export default function Footer() {
       <div className="lk-container py-12">
         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
           <div className="max-w-xs">
-            <span className="inline-flex h-10 items-center rounded-md bg-[var(--lk-ice)] px-3">
-              <img
-                src={`${BASE_PATH}/landing/logo.png`}
-                alt="Logo SWK"
-                className="h-5 w-auto object-contain"
-              />
-            </span>
+            <img
+              src={`${BASE_PATH}/landing/logo.png`}
+              alt="Logo SWK"
+              className="h-7 w-auto object-contain"
+            />
             <p className="lk-mono mt-4 text-[10px] uppercase leading-relaxed tracking-[0.18em] text-[var(--lk-dim)]">
               Visão computacional para segurança, produtividade e qualidade.
             </p>
@@ -27,16 +25,6 @@ export default function Footer() {
                   </a>
                 </li>
               ))}
-              <li>
-                <a
-                  href={whatsappHref}
-                  target="_blank"
-                  rel="noopener"
-                  className="lk-nav-link !text-[var(--lk-mint)]"
-                >
-                  Falar no WhatsApp
-                </a>
-              </li>
             </ul>
           </nav>
         </div>

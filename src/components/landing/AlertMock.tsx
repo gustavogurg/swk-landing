@@ -25,8 +25,8 @@ export default function AlertMock() {
           CAM-02 · Galpão logístico
         </p>
         <p className="mt-4 text-[14px] leading-relaxed text-[var(--lk-slate)]">
-          Operador sem colete a 1,2 m da empilhadeira em movimento. Confira a
-          imagem e confirme a ocorrência.
+          Pessoa a 1,2 m da empilhadeira em movimento. Confira a imagem e
+          confirme a ocorrência.
         </p>
         <div className="lk-mock-thumb mt-5">
           <img

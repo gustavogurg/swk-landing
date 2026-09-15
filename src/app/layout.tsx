@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono, IBM_Plex_Sans, Space_Grotesk } from "next/font/google";
+import {
+  IBM_Plex_Mono,
+  IBM_Plex_Sans,
+  Roboto,
+  Space_Grotesk,
+} from "next/font/google";
 import "./globals.css";
 import "./landing.css";
 
@@ -21,6 +26,12 @@ const mono = IBM_Plex_Mono({
   weight: ["400", "500", "600"],
 });
 
+const brand = Roboto({
+  subsets: ["latin"],
+  variable: "--font-brand",
+  weight: ["400", "500"],
+});
+
 export const metadata: Metadata = {
   title: "SWK Vision Solutions — Visão computacional para a sua operação",
   description:
@@ -36,7 +47,7 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body>
         <div
-          className={`lk-root ${display.variable} ${body.variable} ${mono.variable}`}
+          className={`lk-root ${display.variable} ${body.variable} ${mono.variable} ${brand.variable}`}
         >
           {children}
         </div>
