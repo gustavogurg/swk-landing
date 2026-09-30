@@ -1,4 +1,4 @@
-import { BASE_PATH, NAV_LINKS } from "./config";
+import { BASE_PATH, NAV_LINKS, PLATFORM_URL } from "./config";
 
 export default function Footer() {
   return (
@@ -25,6 +25,11 @@ export default function Footer() {
                   </a>
                 </li>
               ))}
+              <li>
+                <a href={PLATFORM_URL} className="lk-nav-link">
+                  Acessar plataforma
+                </a>
+              </li>
             </ul>
           </nav>
         </div>

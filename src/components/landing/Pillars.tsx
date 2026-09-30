@@ -127,6 +127,12 @@ const PILLARS: Pillar[] = [
   },
 ];
 
+const PILLAR_ORDER: Record<string, number> = {
+  Segurança: 0,
+  Qualidade: 1,
+  Produtividade: 2,
+};
+
 function CaseRow({ item, index }: { item: CaseItem; index: number }) {
   const imageRight = index % 2 === 1;
 
@@ -189,7 +195,7 @@ export default function Pillars() {
     <section id="cases" className="lk-hairline scroll-mt-24 py-24 md:py-32">
       <div className="lk-container">
         <Reveal>
-          <p className="lk-eyebrow mb-4">Seção 01 · Cases</p>
+          <p className="lk-eyebrow mb-4">Seção 02 · Cases</p>
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <h2 className="lk-display max-w-xl text-3xl font-medium leading-tight md:text-4xl">
               Cases validados
@@ -198,12 +204,12 @@ export default function Pillars() {
           </div>
         </Reveal>
 
-        {PILLARS.map((pillar) => (
-          <div key={pillar.label} className="lk-hairline mt-16 pt-14">
+        {[...PILLARS].sort((a, b) => PILLAR_ORDER[a.label] - PILLAR_ORDER[b.label]).map((pillar) => (
+          <div key={pillar.label} className="lk-pillar mt-16">
             <Reveal>
               <div className="mb-12 grid gap-5 lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] lg:items-end">
                 <div>
-                  <p className="lk-mono mb-3 text-[10.5px] uppercase tracking-[0.2em] text-[var(--lk-mint)]">
+                  <p className="lk-mono mb-3 text-[13px] font-medium uppercase tracking-[0.16em] text-[var(--lk-mint)]">
                     {pillar.label} ·{" "}
                     {String(pillar.cases.length).padStart(2, "0")} casos
                   </p>

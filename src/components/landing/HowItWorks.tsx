@@ -3,34 +3,37 @@ import { Reveal } from "./hud";
 
 const STEPS = [
   {
-    tag: "01 · CONECTAR",
-    title: "A câmera que você já tem",
-    body: "Lemos câmeras IP e RTSP já instaladas. Nada de trocar infraestrutura.",
+    number: "01",
+    title: "Conectar",
+    summary: "À câmera que você já tem",
+    body: "Integramos as câmeras IP e RTSP já instaladas na operação.",
   },
   {
-    tag: "02 · ENTENDER",
-    title: "IA rodando na borda",
-    body: "A análise acontece junto da câmera, em milissegundos.",
+    number: "02",
+    title: "Entender",
+    summary: "O que acontece na imagem",
+    body: "Modelos de IA analisam o vídeo junto da câmera, conforme os critérios do seu processo.",
   },
   {
-    tag: "03 · AGIR",
-    title: "Alerta com contexto",
-    body: "Desvio vira alerta no WhatsApp com imagem e porquê. Dashboard ao vivo, relatórios para a gestão.",
+    number: "03",
+    title: "Agir",
+    summary: "Com informação no momento certo",
+    body: "A equipe recebe a ocorrência com imagem e contexto; a gestão acompanha indicadores e relatórios.",
   },
 ];
 
 const EDGE_POINTS = [
   {
-    tag: "RESPOSTA IMEDIATA",
-    body: "a detecção acontece em milissegundos, sem depender de link",
+    title: "Resposta imediata",
+    body: "A detecção acontece localmente, sem esperar que o vídeo seja enviado para análise.",
   },
   {
-    tag: "PRIVACIDADE",
-    body: "só o evento relevante é enviado",
+    title: "Privacidade",
+    body: "Só o evento relevante precisa sair da operação.",
   },
   {
-    tag: "ROBUSTEZ",
-    body: "a análise continua mesmo com internet instável ou limitada",
+    title: "Robustez",
+    body: "A análise continua mesmo com conexão instável ou limitada.",
   },
 ];
 
@@ -39,136 +42,114 @@ export default function HowItWorks() {
     <section id="tecnologia" className="scroll-mt-24 py-24 md:py-32">
       <div className="lk-container">
         <Reveal>
-          <p className="lk-eyebrow mb-4">Seção 02 · Nossa tecnologia</p>
-          <h2 className="lk-display max-w-xl text-3xl font-medium leading-tight md:text-4xl">
-            Da câmera ao alerta.
+          <p className="lk-eyebrow mb-4">Seção 03 · Nossa tecnologia</p>
+          <h2 className="lk-display max-w-2xl text-3xl font-medium leading-tight md:text-4xl">
+            Da câmera ao alerta, em três passos.
           </h2>
         </Reveal>
 
-        <Reveal delay={0.05}>
-          <div className="lk-hairline mt-12 grid gap-10 md:grid-cols-3 md:gap-0">
-            {STEPS.map((step, i) => (
-              <div
-                key={step.tag}
-                className={
-                  i === 0
-                    ? "md:pr-10"
-                    : i === STEPS.length - 1
-                      ? "md:border-l md:border-[var(--lk-line)] md:pl-10"
-                      : "md:border-l md:border-[var(--lk-line)] md:px-10"
-                }
-              >
-                <p className="lk-mono text-[11px] uppercase tracking-[0.18em] text-[var(--lk-mint)]">
-                  {step.tag}
+        <div className="mt-12 grid gap-4 md:grid-cols-3">
+          {STEPS.map((step, index) => (
+            <Reveal key={step.number} delay={index * 0.05}>
+              <article className="lk-step h-full">
+                <div className="flex items-baseline gap-4">
+                  <span className="lk-display text-3xl font-medium text-[var(--lk-mint)] md:text-4xl">
+                    {step.number}
+                  </span>
+                  <h3 className="lk-display text-2xl font-medium md:text-[1.7rem]">
+                    {step.title}
+                  </h3>
+                </div>
+                <p className="lk-display mt-6 text-[17px] font-medium text-[var(--lk-ice)]">
+                  {step.summary}
                 </p>
-                <h3 className="lk-display mt-3 text-xl font-medium">
-                  {step.title}
-                </h3>
                 <p className="mt-3 text-[15px] leading-relaxed text-[var(--lk-slate)]">
                   {step.body}
                 </p>
-              </div>
-            ))}
+              </article>
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal>
+          <div className="mt-20 max-w-2xl">
+            <p className="lk-eyebrow mb-4">O fluxo na prática</p>
+            <h3 className="lk-display text-2xl font-medium md:text-3xl">
+              Da imagem à decisão.
+            </h3>
+            <p className="mt-4 text-[15px] leading-relaxed text-[var(--lk-slate)]">
+              O vídeo mostra a captura na operação. A IA interpreta o que vê e
+              entrega uma ocorrência para a equipe avaliar e agir.
+            </p>
           </div>
         </Reveal>
-
-        <Reveal delay={0.1}>
-          <div className="lk-hairline mt-14">
-            <div className="grid items-center gap-8 pt-12 lg:grid-cols-[1.4fr_auto_1fr_auto_1fr] lg:gap-6">
-              <figure>
-                <div className="lk-frame">
-                  <video
-                    className="block aspect-video w-full object-cover"
-                    src={`${BASE_PATH}/landing/hero.mp4`}
-                    poster={`${BASE_PATH}/landing/empilhadeira.jpeg`}
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload="auto"
-                  />
-                </div>
-                <figcaption className="lk-mono mt-2.5 text-[10px] uppercase tracking-[0.16em] text-[var(--lk-dim)]">
-                  Captura · câmera existente
-                </figcaption>
-              </figure>
-
-              <span
-                className="lk-mono hidden text-lg text-[var(--lk-mint)] lg:block"
-                aria-hidden
-              >
-                →
-              </span>
-
-              <div className="lk-panel">
-                <p className="lk-mono text-[10px] uppercase tracking-[0.16em] text-[var(--lk-mint)]">
-                  Análise · IA na borda
-                </p>
-                <ul className="mt-4 space-y-2.5">
-                  <li className="lk-mono text-[11px] uppercase tracking-[0.12em] text-[var(--lk-dim)]">
-                    resposta em milissegundos
-                  </li>
-                  <li className="lk-mono text-[11px] uppercase tracking-[0.12em] text-[var(--lk-dim)]">
-                    modelos treinados para o seu processo
-                  </li>
-                  <li className="lk-mono text-[11px] uppercase tracking-[0.12em] text-[var(--lk-dim)]">
-                    não depende de banda
-                  </li>
-                </ul>
+        <Reveal delay={0.05}>
+          <div className="mt-8 grid items-center gap-5 lg:grid-cols-[1.4fr_1fr_1fr]">
+            <figure>
+              <div className="lk-frame">
+                <video
+                  className="block aspect-video w-full object-cover"
+                  src={`${BASE_PATH}/landing/hero.mp4`}
+                  poster={`${BASE_PATH}/landing/empilhadeira.jpeg`}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  aria-label="Exemplo de captura de câmera em uma operação industrial"
+                />
               </div>
-
-              <span
-                className="lk-mono hidden text-lg text-[var(--lk-mint)] lg:block"
-                aria-hidden
-              >
-                →
-              </span>
-
-              <div className="lk-panel">
-                <p className="lk-mono text-[10px] uppercase tracking-[0.16em] text-[var(--lk-mint)]">
-                  Entrega · Alerta no WhatsApp
-                </p>
-                <ul className="mt-4 space-y-2.5">
-                  <li className="lk-mono text-[11px] uppercase tracking-[0.12em] text-[var(--lk-dim)]">
-                    imagem + contexto do desvio
-                  </li>
-                  <li className="lk-mono text-[11px] uppercase tracking-[0.12em] text-[var(--lk-dim)]">
-                    dashboard ao vivo
-                  </li>
-                  <li className="lk-mono text-[11px] uppercase tracking-[0.12em] text-[var(--lk-dim)]">
-                    relatórios analíticos e gerenciais
-                  </li>
-                </ul>
-              </div>
+              <figcaption className="mt-3 text-[13px] text-[var(--lk-slate)]">
+                01 · Captura com a câmera existente
+              </figcaption>
+            </figure>
+            <div className="lk-flow-panel">
+              <p className="lk-display text-lg font-medium text-[var(--lk-mint)]">
+                02 · Análise na borda
+              </p>
+              <p className="mt-3 text-[14px] leading-relaxed text-[var(--lk-slate)]">
+                A IA reconhece eventos conforme os critérios definidos para
+                aquele ponto da operação.
+              </p>
+            </div>
+            <div className="lk-flow-panel">
+              <p className="lk-display text-lg font-medium text-[var(--lk-mint)]">
+                03 · Entrega com contexto
+              </p>
+              <p className="mt-3 text-[14px] leading-relaxed text-[var(--lk-slate)]">
+                Imagem e ocorrência chegam à equipe; o acompanhamento fica
+                disponível no painel e nos relatórios.
+              </p>
             </div>
           </div>
         </Reveal>
 
-        <Reveal delay={0.1}>
-          <div className="mt-14 border border-[var(--lk-line)] p-8 md:p-10">
-            <p className="lk-eyebrow mb-6">Por que na borda?</p>
-            <ul className="grid gap-5 sm:grid-cols-3">
-              {EDGE_POINTS.map((point) => (
-                <li key={point.tag}>
-                  <p className="lk-mono text-[10.5px] uppercase tracking-[0.18em] text-[var(--lk-ice)]">
-                    {point.tag}
-                  </p>
-                  <p className="mt-2 text-[13.5px] leading-relaxed text-[var(--lk-dim)]">
-                    {point.body}
-                  </p>
-                </li>
-              ))}
-            </ul>
+        <Reveal>
+          <div className="mt-20 max-w-2xl">
+            <p className="lk-eyebrow mb-4">Por que na borda?</p>
+            <h3 className="lk-display text-2xl font-medium md:text-3xl">
+              A análise acontece perto de onde a imagem é capturada.
+            </h3>
+            <p className="mt-4 text-[15px] leading-relaxed text-[var(--lk-slate)]">
+              Esse desenho reduz a dependência da conexão e permite tratar cada
+              ocorrência com rapidez e critério.
+            </p>
           </div>
         </Reveal>
-
-        <Reveal delay={0.14}>
-          <p className="lk-caption mt-12 flex-wrap justify-center leading-relaxed">
-            Plataforma SWK · Detecção de não conformidades · Critérios
-            customizáveis · Perfis de monitoramento · Avaliação de ocorrências ·
-            Relatórios automáticos
-          </p>
-        </Reveal>
+        <div className="mt-8 grid gap-4 sm:grid-cols-3">
+          {EDGE_POINTS.map((point, index) => (
+            <Reveal key={point.title} delay={index * 0.05}>
+              <div className="lk-edge-card h-full">
+                <h4 className="lk-display text-lg font-medium text-[var(--lk-ice)]">
+                  {point.title}
+                </h4>
+                <p className="mt-3 text-[14px] leading-relaxed text-[var(--lk-slate)]">
+                  {point.body}
+                </p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
       </div>
     </section>
   );

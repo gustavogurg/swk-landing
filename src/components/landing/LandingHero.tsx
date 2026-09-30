@@ -1,37 +1,12 @@
-import { BASE_PATH } from "./config";
-import { Caption } from "./hud";
-import AlertMock from "./AlertMock";
-
-const TILES = [
-  {
-    img: "/landing/epi-eletrico.jpeg",
-    alt: "Monitoramento de EPI em subestação elétrica",
-    tone: "warn" as const,
-    caption: "Desvio · CAM-01 · EPI elétrico",
-  },
-  {
-    img: "/landing/empilhadeira.jpeg",
-    alt: "Monitoramento de zona de risco com empilhadeira",
-    tone: "alert" as const,
-    caption: "Alerta · CAM-02 · Zona vermelha",
-  },
-  {
-    img: "/landing/fogo-fumaca.jpeg",
-    alt: "Detecção de fogo e fumaça em pátio",
-    tone: "alert" as const,
-    caption: "Alerta · CAM-03 · Fogo e fumaça",
-  },
-];
+import InstitutionalVideo from "./InstitutionalVideo";
 
 export default function LandingHero() {
   return (
-    <section className="pt-28 pb-16 md:pt-36 md:pb-20">
+    <section className="pt-28 pb-20 md:pt-36 md:pb-28">
       <div className="lk-container">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
+        <div className="grid items-center gap-12 lg:grid-cols-[1fr_1.08fr] lg:gap-14">
           <div>
-            <p className="lk-eyebrow">
-              SWK Vision · Visão computacional e IA
-            </p>
+            <p className="lk-eyebrow">SWK Vision · Visão computacional e IA</p>
             <h1 className="lk-display mt-7 max-w-xl text-[2.35rem] font-medium leading-[1.08] md:text-[3.1rem]">
               Visão Computacional e IA aplicadas à{" "}
               <span className="text-[var(--lk-mint)]">
@@ -40,41 +15,20 @@ export default function LandingHero() {
               da sua operação.
             </h1>
             <p className="mt-6 max-w-lg text-[16.5px] leading-relaxed text-[var(--lk-slate)]">
-              Usamos as câmeras que você já tem. A análise roda na borda e o
-              alerta chega no WhatsApp, com a imagem do que aconteceu.
+              Transformamos imagens da operação em informação para agir no
+              momento certo. Conheça a SWK e veja onde nossa tecnologia pode
+              gerar valor para o seu negócio.
             </p>
-
             <div className="mt-9 flex flex-wrap items-center gap-4">
               <a href="#contato" className="lk-btn lk-btn-primary">
                 Entrar em contato
               </a>
-              <a href="#cases" className="lk-btn lk-btn-ghost">
-                Ver cases
+              <a href="#solucao" className="lk-btn lk-btn-ghost">
+                Conhecer a solução
               </a>
             </div>
           </div>
-
-          <AlertMock />
-        </div>
-
-        <div className="lk-hairline mt-16">
-          <div className="grid gap-5 pt-10 sm:grid-cols-3">
-            {TILES.map((tile) => (
-              <a key={tile.caption} href="#cases" className="lk-tile">
-                <div className="lk-tile-media">
-                  <img
-                    src={`${BASE_PATH}${tile.img}`}
-                    alt={tile.alt}
-                    className="h-full w-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="lk-tile-caption">
-                  <Caption tone={tile.tone}>{tile.caption}</Caption>
-                </div>
-              </a>
-            ))}
-          </div>
+          <InstitutionalVideo />
         </div>
       </div>
     </section>

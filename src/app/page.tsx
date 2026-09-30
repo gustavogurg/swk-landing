@@ -1,6 +1,7 @@
 import LandingHeader from "@/components/landing/LandingHeader";
 import LandingHero from "@/components/landing/LandingHero";
 import SectorsStrip from "@/components/landing/SectorsStrip";
+import Solution from "@/components/landing/Solution";
 import Pillars from "@/components/landing/Pillars";
 import HowItWorks from "@/components/landing/HowItWorks";
 import Differentiators from "@/components/landing/Differentiators";
@@ -15,6 +16,7 @@ export default function LandingPage() {
       <main>
         <LandingHero />
         <SectorsStrip />
+        <Solution />
         <Pillars />
         <HowItWorks />
         <Differentiators />
