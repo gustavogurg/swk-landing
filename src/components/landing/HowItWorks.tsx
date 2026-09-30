@@ -42,7 +42,7 @@ export default function HowItWorks() {
     <section id="tecnologia" className="scroll-mt-24 py-24 md:py-32">
       <div className="lk-container">
         <Reveal>
-          <p className="lk-eyebrow mb-4">Seção 03 · Nossa tecnologia</p>
+          <p className="lk-section-label mb-4">Nossa tecnologia</p>
           <h2 className="lk-display max-w-2xl text-3xl font-medium leading-tight md:text-4xl">
             Da câmera ao alerta, em três passos.
           </h2>

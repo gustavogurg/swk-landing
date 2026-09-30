@@ -9,18 +9,13 @@ const SECTORS = [
 export default function SectorsStrip() {
   return (
     <section className="border-y border-[var(--lk-line)]">
-      <div className="lk-container flex flex-col items-center gap-4 py-7 md:flex-row md:justify-between">
-        <p className="lk-mono shrink-0 text-[10.5px] uppercase tracking-[0.2em] text-[var(--lk-dim)]">
-          Para operações de
-        </p>
-        <ul className="lk-mono flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-[12px] uppercase tracking-[0.14em] text-[var(--lk-slate)]">
-          {SECTORS.map((sector, i) => (
-            <li key={sector} className="flex items-center gap-3">
-              {i > 0 && (
-                <span className="text-[var(--lk-mint)]" aria-hidden>
-                  ·
-                </span>
-              )}
+      <div className="lk-container flex flex-col gap-6 py-9 md:flex-row md:items-center md:justify-between md:gap-10">
+        <h2 className="lk-display max-w-xs shrink-0 text-[1.4rem] font-medium leading-tight text-[var(--lk-ice)] md:text-[1.55rem]">
+          Onde já estamos atuando
+        </h2>
+        <ul className="flex flex-wrap gap-2.5 md:justify-end">
+          {SECTORS.map((sector) => (
+            <li key={sector} className="rounded-full border border-[var(--lk-line-strong)] px-3 py-1.5 text-[13px] font-medium text-[var(--lk-slate)]">
               {sector}
             </li>
           ))}

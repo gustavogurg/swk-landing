@@ -23,7 +23,7 @@ export default function Solution() {
     <section id="solucao" className="lk-hairline scroll-mt-24 py-24 md:py-32">
       <div className="lk-container">
         <Reveal>
-          <p className="lk-eyebrow mb-4">Seção 01 · Nossa solução</p>
+          <p className="lk-section-label mb-4">Nossa solução</p>
           <div className="grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-end">
             <h2 className="lk-display max-w-xl text-3xl font-medium leading-tight md:text-4xl">
               Inteligência para enxergar o que importa na sua operação.

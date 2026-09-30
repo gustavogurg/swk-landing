@@ -31,7 +31,7 @@ export default function About() {
         <Reveal>
           <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
             <div>
-              <p className="lk-eyebrow mb-3">Quem faz a SWK</p>
+              <p className="lk-section-label mb-3">Quem faz a SWK</p>
               <h2 className="lk-display max-w-2xl text-2xl font-medium leading-tight md:text-3xl">
                 Spin-off da FWK e da SP5 Office, fundada em 2023.
               </h2>

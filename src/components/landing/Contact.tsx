@@ -42,7 +42,7 @@ export default function Contact() {
       <div className="lk-container">
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
-            <p className="lk-eyebrow mb-5 !justify-center">Seção 05 · Contato</p>
+            <p className="lk-section-label mb-5 !justify-center">Contato</p>
             <h2 className="lk-display text-3xl font-medium leading-tight md:text-[2.7rem]">
               Seu processo não está aqui?{" "}
               <span className="text-[var(--lk-mint)]">
