@@ -196,12 +196,9 @@ export default function Pillars() {
       <div className="lk-container">
         <Reveal>
           <p className="lk-section-label mb-4">Cases</p>
-          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-            <h2 className="lk-display max-w-xl text-3xl font-medium leading-tight md:text-4xl">
-              Cases validados
-            </h2>
-            <Caption>07 canais · 03 frentes</Caption>
-          </div>
+          <h2 className="lk-display max-w-xl text-3xl font-medium leading-tight md:text-4xl">
+            Cases validados
+          </h2>
         </Reveal>
 
         {[...PILLARS].sort((a, b) => PILLAR_ORDER[a.label] - PILLAR_ORDER[b.label]).map((pillar) => (
