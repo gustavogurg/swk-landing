@@ -40,7 +40,7 @@ export default function InstitutionalVideo() {
         )}
       </div>
       <figcaption className="mt-3 text-[13px] leading-relaxed text-[var(--lk-slate)]">
-        Conheça a SWK Vision Solutions e as aplicações da nossa tecnologia.
+        Conheça a SWK e as aplicações da nossa tecnologia.
       </figcaption>
     </figure>
   );

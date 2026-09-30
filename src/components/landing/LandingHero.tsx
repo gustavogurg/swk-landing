@@ -6,7 +6,7 @@ export default function LandingHero() {
       <div className="lk-container">
         <div className="grid items-center gap-12 lg:grid-cols-[1fr_1.08fr] lg:gap-14">
           <div>
-            <p className="lk-eyebrow">SWK Vision · Visão computacional e IA</p>
+            <p className="lk-eyebrow">SWK Soluções · Visão computacional e IA</p>
             <h1 className="lk-display mt-7 max-w-xl text-[2.35rem] font-medium leading-[1.08] md:text-[3.1rem]">
               Visão Computacional e IA aplicadas à{" "}
               <span className="text-[var(--lk-mint)]">
