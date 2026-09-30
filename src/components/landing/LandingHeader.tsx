@@ -10,13 +10,10 @@ export default function LandingHeader() {
           aria-label="SWK Vision Solutions — início"
         >
           <img
-            src={`${BASE_PATH}/landing/logo.png`}
-            alt="Logo SWK"
-            className="h-7 w-auto object-contain"
+            src={`${BASE_PATH}/landing/logo-horizontal.png`}
+            alt="SWK Vision Solutions"
+            className="h-8 w-auto object-contain"
           />
-          <span className="lk-brand-font text-[15px] text-[var(--lk-slate)]">
-            SWK Vision Solutions
-          </span>
         </a>
 
         <nav

@@ -7,9 +7,9 @@ export default function Footer() {
         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
           <div className="max-w-xs">
             <img
-              src={`${BASE_PATH}/landing/logo.png`}
-              alt="Logo SWK"
-              className="h-7 w-auto object-contain"
+              src={`${BASE_PATH}/landing/logo-completa.png`}
+              alt="SWK Vision Solutions"
+              className="h-16 w-auto object-contain"
             />
             <p className="lk-mono mt-4 text-[10px] uppercase leading-relaxed tracking-[0.18em] text-[var(--lk-dim)]">
               Visão computacional para segurança, produtividade e qualidade.

@@ -322,10 +322,6 @@ html {
   background: transparent;
 }
 
-.lk-brand-font {
-  font-family: var(--font-brand), ui-sans-serif, system-ui, sans-serif;
-}
-
 .lk-field {
   display: flex;
   flex-direction: column;
