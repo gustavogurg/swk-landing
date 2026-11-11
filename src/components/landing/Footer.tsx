@@ -30,12 +30,23 @@ export default function Footer() {
                   Acessar plataforma
                 </a>
               </li>
+              <li>
+                <a href={`${BASE_PATH}/politica-de-privacidade`} className="lk-nav-link">
+                  Privacidade
+                </a>
+              </li>
+              <li>
+                <a href={`${BASE_PATH}/termos`} className="lk-nav-link">
+                  Termos
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
 
         <div className="lk-mono mt-12 flex flex-col gap-3 border-t border-[var(--lk-line)] pt-6 text-[10px] uppercase tracking-[0.18em] text-[var(--lk-dim)] md:flex-row md:items-center md:justify-between">
           <p>© 2026 SWK Vision Solutions</p>
+          <p>SWK SOLUÇÕES LTDA - EPP · CNPJ 52.552.020/0001-79</p>
           <p>
             Câmeras existentes · IA na borda · Soluções sob medida
           </p>
